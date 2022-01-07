@@ -1,0 +1,31 @@
+//@mixing and @include allows styles to be reused throughtout the stylesheet
+$sizes: (
+    'phone': 375px,
+    'phonePlus': 425px,
+    'small': 768px,
+    'medium': 992px,
+    'medium-large': 1024px,
+    'large': 1200px,
+    'extra-large': 2560px,
+);
+
+$containerWidth: (
+    'small': 730px,
+    'medium': 930px,
+    'medium-large': 988px,
+    'large': 1170px,
+);
+
+@mixin respond-to($size) {
+    @if map-has-key($sizes, $size) {
+        @media (min-width: map-get($sizes , $size )) {
+            @content;
+        }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$size}`. "
+        + "Available breakpoints are: #{map-keys($sizes)}.";
+    }
+}
