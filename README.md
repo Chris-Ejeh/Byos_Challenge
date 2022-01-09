@@ -1,10 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Introduction
+
+-   This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+-   Create a 4 page application with date queried from https://randomuser.me/
+
+#### Page 1 - Authentication with a hardcoded user.
+
+-   Ensured that unauthenticated users cannot view the userslist
+-   Users can Sign up or Login
+
+#### page 2 - Time Page (publically accessible)
+
+-   Showed the current time in a formateL 'Day/Month/Year" - "hours:minutes:seconds"
+-   Animated the time using https://www.react-reveal.com/
+
+#### page 3 - UserList (private page for lodded in users only)
+
+-   showed 50 users with thier image and name
+
+#### page 4/Side bar
+
+-   show user details (img, name, email, age)
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
+clone the app
+
+# then install dependencies
+npm install
+
+#then run the application with
+
 npm run dev
 # or
 yarn dev
@@ -22,8 +50,8 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+-   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
