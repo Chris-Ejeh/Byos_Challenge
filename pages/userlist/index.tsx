@@ -1,6 +1,5 @@
 import { GetStaticProps } from 'next';
 import { FC } from 'react';
-import { initializeApollo } from '../../apollo/apollo-client';
 import Users from '../../components/Users/Users';
 import { UserListProps } from '../../utils/types';
 
