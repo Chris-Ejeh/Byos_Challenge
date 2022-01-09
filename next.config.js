@@ -7,7 +7,9 @@ module.exports = {
         localIdentName: '[local]___[hash:base64:5]',
     },
     trailingSlash: true,
-
+    env: {
+        BACKEND_URL: process.env.BACKEND_URL,
+    },
     images: {
         domains: ['randomuser.me'],
     },

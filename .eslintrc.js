@@ -9,7 +9,7 @@ module.exports = {
             jsx: true,
         },
     },
-    extends: ['eslint:recommended'],
+
     settings: {
         react: {
             version: 'detect',
