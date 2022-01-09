@@ -1,0 +1,12 @@
+@import '../../styles/shared/color.scss';
+@import '../../styles/shared/background.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 4rem;
+    margin-top: 10rem;
+    width: 60%;
+}

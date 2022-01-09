@@ -6,6 +6,7 @@ $sizes: (
     'medium': 992px,
     'medium-large': 1024px,
     'large': 1200px,
+    'large-medium': 1440px,
     'extra-large': 2560px,
 );
 
@@ -14,6 +15,8 @@ $containerWidth: (
     'medium': 930px,
     'medium-large': 988px,
     'large': 1170px,
+    'large-medium': 1350px,
+    'extra-large': 2490px,
 );
 
 @mixin respond-to($size) {

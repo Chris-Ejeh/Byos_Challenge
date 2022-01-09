@@ -1,0 +1,27 @@
+@import '../../styles/shared/color.scss';
+
+.container {
+    text-align: center;
+    color: $white;
+}
+
+.img {
+    border-radius: 3rem;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first,
+.last {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1rem;
+}
+
+.last {
+    margin-left: 0.5rem;
+}

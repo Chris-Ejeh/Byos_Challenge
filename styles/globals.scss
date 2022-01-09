@@ -14,7 +14,7 @@ body {
 }
 
 body {
-    background: url($background) repeat;
+    background: $background repeat;
 }
 
 *,
@@ -71,6 +71,14 @@ button {
 
     @include respond-to('large') {
         width: map-get($containerWidth, 'large');
+    }
+
+    @include respond-to('large-medium') {
+        width: map-get($containerWidth, 'large-medium');
+    }
+
+    @include respond-to('extra-large') {
+        width: map-get($containerWidth, 'extra-large');
     }
 }
 

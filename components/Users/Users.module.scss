@@ -1,0 +1,59 @@
+@import '../../styles/shared/color.scss';
+
+.container {
+    display: flex;
+}
+
+.users {
+    background-color: $white;
+    padding: 5rem;
+    width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+}
+
+.usersContainer {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border: 0;
+    background-color: $white;
+
+    &:hover {
+        transform: scale(120%);
+    }
+}
+
+.img {
+    border-radius: 3rem;
+}
+
+.first,
+.last {
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-left: 1.5rem;
+    &:hover {
+        transform: scale(120%);
+    }
+}
+
+.last {
+    margin-left: 0.5rem;
+}
