@@ -1,9 +1,24 @@
 import { makeVar, ReactiveVar } from '@apollo/client';
-import { FormDataProps, UserListProps } from '../utils/types';
+import { CurrentUserProps, FormDataProps, UserListProps } from '../utils/types';
 
 export const FormStore: ReactiveVar<FormDataProps> = makeVar<FormDataProps>({
     email: '',
     name: '',
+    password: '',
+});
+
+export const CurrentUserStore: ReactiveVar<CurrentUserProps> = makeVar<CurrentUserProps>({
+    email: '',
+    name: {
+        first: '',
+        last: '',
+        title: '',
+    },
+    picture: {
+        large: '',
+        medium: '',
+        thumbnail: '',
+    },
     password: '',
 });
 
@@ -34,5 +49,14 @@ export const UserStore: ReactiveVar<UserListProps> = makeVar({
     registered: {
         age: 0,
         date: '',
+    },
+    login: {
+        uuid: '',
+        username: '',
+        password: '',
+        salt: '',
+        md5: '',
+        shal: '',
+        sha256: '',
     },
 });

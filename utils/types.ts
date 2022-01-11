@@ -20,6 +20,7 @@ export interface UserListProps {
         thumbnail: string;
     };
     nat: string;
+    login: LoginProps;
 }
 
 export interface IName {
@@ -45,4 +46,25 @@ export interface FormDataProps {
     name: string;
     email: string;
     password: string;
+}
+
+export interface LoginProps {
+    uuid: string;
+    username: string;
+    password: string;
+    salt: string;
+    md5: string;
+    shal: string;
+    sha256: string;
+}
+
+export interface CurrentUserProps {
+    email: string;
+    name: IName;
+    password: string;
+    picture: {
+        large: string;
+        medium: string;
+        thumbnail: string;
+    };
 }

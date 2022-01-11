@@ -1,7 +1,7 @@
 import { useReactiveVar } from '@apollo/client';
 import Image from 'next/image';
 import { FC } from 'react';
-import { FormStore, UserStore } from '../../apollo/apollo-cache';
+import { CurrentUserStore, UserStore } from '../../apollo/apollo-cache';
 
 import styles from './ProfileDetails.module.scss';
 
@@ -13,7 +13,7 @@ interface ProfileDetailsProps {
 }
 
 const ProfileDetails: FC<ProfileDetailsProps> = ({ className, registeredProfile }) => {
-    const registeredUser = useReactiveVar(FormStore);
+    const registeredUser = useReactiveVar(CurrentUserStore);
     const user = useReactiveVar(UserStore);
 
     return (
@@ -22,15 +22,16 @@ const ProfileDetails: FC<ProfileDetailsProps> = ({ className, registeredProfile 
                 <>
                     <div>
                         <Image
-                            alt={registeredUser?.name}
-                            src={'/Adam Lujan.jpeg'}
+                            alt={registeredUser?.name.first}
+                            src={registeredUser?.picture?.thumbnail}
                             width={100}
                             height={100}
                             className={styles.img}
                         />
                     </div>
                     <div className={styles.info}>
-                        <p className={styles.first}>{registeredUser?.name}</p>
+                        <p className={styles.first}>{registeredUser?.name.first}</p>
+                        <p className={styles.last}>{registeredUser?.name.last}</p>
                     </div>
                 </>
             )}

@@ -12,6 +12,16 @@
     text-transform: uppercase;
 }
 
+.errorContainer {
+    text-align: center;
+}
+
+.errorText {
+    font-size: 1rem;
+    color: $primary;
+    margin: 0;
+}
+
 .inputContainer {
     color: $black;
     font-style: normal;

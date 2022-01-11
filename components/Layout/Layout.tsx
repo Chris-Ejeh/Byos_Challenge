@@ -7,7 +7,7 @@ import styles from './Layout.module.scss';
 const Layout: FC<NavbarProps> = ({ children, user }) => {
     return (
         <>
-            <Head pageTitle="Byos Challenge" />
+            <Head pageTitle="Find a User Challenge" />
             <Header user={user} />
             <div className={styles.layoutChildren}>{children}</div>
         </>

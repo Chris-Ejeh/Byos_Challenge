@@ -3,7 +3,7 @@ import { FC } from 'react';
 import Users from '../../components/Users/Users';
 import { UserListProps } from '../../utils/types';
 
-const BACKENDAPI = `${process.env.BACKEND_URL}?nat=gb,us,ca&results=50&exc=login`;
+export const BACKENDAPI = `${process.env.BACKEND_URL}?nat=gb,us,ca&results=50`;
 
 interface UserProps {
     users: UserListProps[];

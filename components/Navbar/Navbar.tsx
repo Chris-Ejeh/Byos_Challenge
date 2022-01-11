@@ -1,7 +1,7 @@
 import { useReactiveVar } from '@apollo/client';
 import Link from 'next/link';
 import { FC } from 'react';
-import { FormStore } from '../../apollo/apollo-cache';
+import { CurrentUserStore } from '../../apollo/apollo-cache';
 import ProfileDetails from '../ProfileDetails/ProfileDetails';
 
 import styles from './Navbar.module.scss';
@@ -11,14 +11,14 @@ export interface NavbarProps {
 }
 
 const Navbar: FC<NavbarProps> = ({ user }) => {
-    const userData = useReactiveVar(FormStore);
+    const currentUser = useReactiveVar(CurrentUserStore);
 
     return (
         <nav className={styles.navbar}>
-            {userData.password && <ProfileDetails registeredProfile={true} />}
+            {currentUser.password && <ProfileDetails registeredProfile={true} />}
 
             <div className={styles.navItems}>
-                {userData.password && (
+                {currentUser.password && (
                     <div className={styles.navItem}>
                         <Link href="/userlist">
                             <a>Users</a>
@@ -33,18 +33,27 @@ const Navbar: FC<NavbarProps> = ({ user }) => {
                 </div>
             </div>
 
-            {userData.password ? (
+            {currentUser.password ? (
                 <div className={styles.navItem}>
                     <Link href="/">
                         <a
                             role={'button'}
-                            onClick={() =>
-                                FormStore({
+                            onClick={() => {
+                                CurrentUserStore({
                                     email: '',
-                                    name: '',
+                                    name: {
+                                        first: '',
+                                        last: '',
+                                        title: '',
+                                    },
+                                    picture: {
+                                        large: '',
+                                        medium: '',
+                                        thumbnail: '',
+                                    },
                                     password: '',
-                                })
-                            }>
+                                });
+                            }}>
                             Sign Out
                         </a>
                     </Link>

@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { UserListProps } from '../../utils/types';
 import Layout from '../Layout/Layout';
 
 import styles from './Time.module.scss';
@@ -7,13 +6,12 @@ import styles from './Time.module.scss';
 ///external libraries
 import dayjs from 'dayjs';
 const cn = require('classnames');
+// this is not a good library
+// Throwing error : react-dom.development.js?ac89:67 Warning: componentWillReceiveProps has been renamed, and is not recommended for use
+// recommend using a new animation library
 const Bounce = require('react-reveal/Bounce');
 
-interface TimeProps {
-    users: UserListProps[];
-}
-
-const Time: FC<TimeProps> = () => {
+const Time: FC = () => {
     const date = new Date();
 
     return (

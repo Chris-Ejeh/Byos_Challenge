@@ -13,4 +13,10 @@ module.exports = {
     images: {
         domains: ['randomuser.me'],
     },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+    typescript: {
+        ignoreDuringBuilds: true,
+    },
 };
